@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>     <link href="prism.css" rel="stylesheet"> <script type="text/javascript-lazy"  >  	var admobid = {}; if( /(android)/i.test(navigator.userAgent) ) {     admobid = {            banner: 'ca-app-pub-5830283354936773/5921375320',        interstitial: 'ca-app-pub-5830283354936773/1902239267'     }; } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {     admobid = {            banner: 'ca-app-pub-6869992474017983/4806197152',         interstitial: 'ca-app-pub-6869992474017983/7563979554'     }; } else {     admobid = {              banner: 'ca-app-pub-6869992474017983/8878394753',         interstitial: 'ca-app-pub-6869992474017983/1355127956'     }; } if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {     document.addEventListener('deviceready', initApp, false); } else {     initApp(); }  function initApp() {     if (! AdMob ) { alert( 'admob plugin not ready' ); return; }       AdMob.createBanner( {         adId: admobid.banner,         isTesting: false,         overlap: false,         offsetTopBar: false,         position: AdMob.AD_POSITION.BOTTOM_CENTER,         bgColor: 'black'     } );      AdMob.prepareInterstitial({         adId: admobid.interstitial,         autoShow: true     }); }    </script></head>
+  <body style="background-color:white;" >
+	
+	<div class="topcoat-navigation-bar" ng-controller="HomeCtrl">
+	  <div class="topcoat-navigation-bar__item left quarter">
+		<a class="topcoat-icon-button--quiet" ng-click="slidePage('/','modal')">
+		  <span class="topcoat-icon home-icon"></span>
+		</a>
+	  </div>
+	  <div class="topcoat-navigation-bar__item center half">
+		<h1 class="topcoat-navigation-bar__title">Cake</h1>
+	  </div>
+	</div>
+	
+	<script type="text/javascript" src="prism.js"></script>
+
+	<pre  ng-prism  class="language-python"><code>
+		
+
+
+
+
+import numpy as np
+
+abc = ['abc']
+xyz = ['xyz']
+
+# string concatenation
+print(np.char.add(abc, xyz))    # ['abcxyz']
+
+print(np.char.add(abc, 'pqr'))  # ['abcpqr']
+
+# string multiplication
+print(np.char.multiply(abc, 3)) # ['abcabcabc']
+
+# numpy.char.center: This function returns an array of the required width so that the input string is
+# centered and padded on the left and right with fillchar.
+
+print(np.char.center(abc, 20, fillchar = '*'))  # ['********abc*********']
+
+# numpy.char.capitalize(): This function returns the copy of the string with the first letter capitalized.
+print(np.char.capitalize('hello world'))        # Hello world
+
+# numpy.char.title(): This function returns a title cased version of the input string with the first letter
+# of each word capitalized.
+print(np.char.title('hello how are you?'))      # Hello How Are You?
+
+# numpy.char.lower(): This function returns an array with elements converted to lowercase. It calls
+# str.lower for each element.
+print(np.char.lower(['HELLO','WORLD']))         # ['hello' 'world']
+
+# numpy.char.upper(): This function calls str.upper function on each element in an array to return
+# the uppercase array elements.
+print(np.char.upper('hello'))                   # HELLO
+
+# numpy.char.split(): This function returns a list of words in the input string. By default, a whitespace
+# is used as a separator
+print(np.char.split('Omkar Pathak'))            # ['Omkar', 'Pathak']
+print(np.char.split('2017-02-11', sep='-'))     # ['2017', '02', '11']
+
+# numpy.char.join(): This method returns a string in which the individual characters are joined by
+# separator character specified.
+print(np.char.join(':','dmy'))                  # d:m:y
+
+
+
+</code></pre></body></html>
+
