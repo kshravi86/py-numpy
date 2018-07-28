@@ -24,7 +24,7 @@ var myApp = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.d
 		$routeProvider.when('/view9',{templateUrl:'partials/P03_NumpyAttributes.html'});
        $routeProvider.when('/view10',{templateUrl:'partials/P08_NumpyArithmeticOperations.html'});
 	   $routeProvider.when("/view11",{templateUrl:'partials/P05_NumpyArrayManipulation.html'});
-	   $routeProvider.when("/view12",{templateUrl:'partials/CheapTravel.html'});
+	   $routeProvider.when("/view12",{templateUrl:'partials/P07_NumpyMathematicalFunctions.html'});
 	   $routeProvider.when("/view13",{templateUrl:'partials/Drinks.html'});
 	   $routeProvider.when("/view14",{templateUrl:'partials/EpicGame.html'});
 	   $routeProvider.when("/view15",{templateUrl:'partials/Expression.html'});
